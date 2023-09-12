@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap');
+
+body {
+  background-color: tan;
+  color: red;
+  font-family: "Oswald", sans-serif;
+  padding-top: 50px;
+}
+
+.container {
+  max-width: 1600px;
+  padding: 5px 20px;
+  margin: 0 auto;
+}
+
+#gallery{
+  display: flex;
+  justify-content: center; align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.galleryImage {
+  max-width: 100%;
+  transition: transform 250ms; cursor: pointer;
+  border-radius: 10px;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+.galleryImage + p { /*target p element immediately after img element*/
+  margin-bottom: 10px;
+  font-family: 'Montserrat', 'sans-serif';
+  color: white;
+  display: none; /*caption on main page*/
+}
+
+.galleryImage:hover{
+  transform: translateY(-2px);
+  box-shadow: 3px 3px 10px black;
+}
+
+#popup{
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom:0;
+  background-color: black;
+  opacity: 0.95;
+  display: flex;
+  justify-content: center; align-items: center;
+  transform: translateY(-100%);
+  transition: 250ms transform;
+  padding: 50px;
+}
+
+#selectedImage {
+  max-height: 100%;
+  max-width: 100%;
+}
+#selectedImage + p { /*caption on popup*/
+  font-family: 'Montserrat', 'sans-serif';
+  color: white;
+  padding-left: 2rem;
+
+}
+
+
+@media screen and (min-width: 485px){
+  .container {
+    /*column-count: 2; column-width: 30vw;*/
+    column-width: 320px;
+    grid-gap: 20px;
+  }
+  .galleryImage { break-inside: avoid; }
+}
+
+@media screen and (max-width: 485px) {
+  @media screen and (max-width: 485px) {
+    #popup {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    #selectedImage + p {
+      position: static;
+      margin-top: 2rem;
+      text-align: center;
+      padding-left: 0;
+      width: 100%;
+      display: block;
+    }
+  }
+}

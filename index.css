@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap');
+
+* { padding: 0; margin: 0; box-sizing: border-box; }
+
+body {
+  background-color: lightblue;
+  color: red;
+  font-family: "Poppins", sans-serif;
+}
+
+/*FADE IN NAV BAR AND START BUTTON*/
+header, .explore-btn {
+  opacity: 0;
+  visibility: hidden;
+}
+.fade-in{
+  opacity: 0.7; visibility: visible; transition: opacity 4s;
+}
+
+/*VIDEO LANDING OVERLAY*/
+section{
+  margin: 0; text-align: center; position: relative;
+}
+
+.wrapper{
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-wrap video{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.overlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: black;
+  opacity: .1;
+}
+
+.landing-text {
+  z-index: 2;
+}
+
+h1 {
+  font-family: 'Courier', monospace;
+  font-weight: 600;
+  font-size: 340%;
+}
+h3 {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 140%;
+  margin-top: 6%;
+  padding-bottom: 7%;
+}
+
+.explore-btn {
+  display: inline-block;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 80%;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: white;
+
+  background: black;
+  border: 2px solid white;
+  padding: 1% 3%;
+  border-radius: 30px;
+}
