@@ -1,4 +1,4 @@
 # snapshots
 
-# April 8, 20234
-- navigation bar
+# Sep 2023
+- test revised site
